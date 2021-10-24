@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    /* diagonal linear gradient */
+    background: linear-gradient(to bottom right, #00c6fb, #96c93d);
+}
+.start-quiz,
+.info-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Start Quiz Button Style*/
+.start-quiz button{
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    background: #fff;
+    color: #007bff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.info-box{
+    
+    width: 540px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.info-box .info-title{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.info-box .info-list{
+    padding: 15px 35px;
+}
+.info-box .info-list .info{
+    margin: 5px 0;
+    font-size: 17px;
+}
+.info-box .buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px solid lightgrey;
+}
+.info-box .buttons button{
+    border: none;
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    padding: 8px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.buttons button.restart{
+    color: #fff;
+    background: #007bff;
+}
+.buttons button.restart:hover{
+    background: #0263ca;
+}
+.buttons button.quit{
+    color: #007bff;
+}
+.buttons button.quit:hover{
+    color: #fff;
+    background: #0263ca;
+}
