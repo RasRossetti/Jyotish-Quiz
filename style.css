@@ -11,7 +11,8 @@ body{
     background: linear-gradient(to bottom right, #00c6fb, #96c93d);
 }
 .start-quiz,
-.info-box{
+.info-box,
+.quiz-box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,7 +31,7 @@ body{
 }
 
 .info-box{
-    
+    display: none;
     width: 540px;
     background: #fff;
     border-radius: 5px;
@@ -89,4 +90,84 @@ body{
 .buttons button.quit:hover{
     color: #fff;
     background: #0263ca;
+}
+.quiz-box{
+    width: 550px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.quiz-box header{
+    position: relative;
+    z-index: 99;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.5);
+}
+.quiz-box header .quiz-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.quiz-box header .timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    padding: 0 8px;
+}
+.quiz-box header .timer .time-text{
+    font-weight: 400;
+    font-size: 20px;
+    user-select: none;
+}
+.quiz-box header .timer .timer-sec{
+    font-weight: 500;
+    font-size: 18px;
+    background: #343a40;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+.quiz-box .section{
+    padding: 25px 30px 20px 30px;
+    background: #fff;
+}
+.quiz-box section .que-text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.quiz-box section .options-list{
+   padding: 20px 0;
+   display: block;
+}
+section .options-list .option{
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
 }
