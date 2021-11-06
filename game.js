@@ -11,32 +11,22 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
-  {
-    question: "What Nakshatra does the Sun occupy?",
-    choice1: "Ketu",
-    choice2: "Venus",
-    choice3: "Sun",
-    choice4: "Moon",
-    answer: 3
-    },
-    { 
-    question: "What Nakshatra does the Moon occupy?",
-    choice1: "Ketu",
-    choice2: "Venus",
-    choice3: "Sun",
-    choice4: "Moon",
-    answer: 3
-    },
-    {  
-    question: "What Nakshatra does Mars occupy?",   
-    choice1: "Ketu",
-    choice2: "Venus",
-    choice3: "Sun",
-    choice4: "Moon",
-    answer: 4
-    },
-];
+let questions = [];
+
+fetch("questions.json")
+    .then(res => {
+        return res.json();
+    })
+    .then(loadedQuestions => {
+        console.log(loadedQuestions);
+        questions = loadedQuestions;
+        startGame();
+    })
+    .catch(err => {
+        console.error(err);
+    });
+
+    
 
 //constants 
 const CORRECT_BONUS = 10;
@@ -51,7 +41,7 @@ startGame = () => {
 
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        locakStorage.setItem("mostRecentScore", score);
+        localStorage.setItem("mostRecentScore", score);
        
 
         return window.location.assign("end.html");
@@ -98,4 +88,3 @@ getNewQuestion = () => {
         score += num;
         scoreText.innerText = score;
     };
-startGame();

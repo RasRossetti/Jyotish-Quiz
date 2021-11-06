@@ -1,0 +1,27 @@
+[
+    {
+      "question": "What Nakshatra does the Sun occupy?",
+      "choice1": "Ketu",
+      "choice2": "Venus",
+      "choice3": "Sun",
+      "choice4": "Moon",
+      "answer": 3
+      },
+      { 
+      "question": "What Nakshatra does the Moon occupy?",
+      "choice1": "Ketu",
+      "choice2": "Venus",
+      "choice3": "Sun",
+      "choice4": "Moon",
+      "answer": 3
+      },
+      {  
+      "question": "What Nakshatra does Mars occupy?",   
+      "choice1": "Ketu",
+      "choice2": "Venus",
+      "choice3": "Sun",
+      "choice4": "Moon",
+      "answer": 4
+      }
+  ]
+  
