@@ -48,6 +48,11 @@
 #progressBarFull{
     height: 3.4rem;
     background-color: #56a5eb;
-    width: 0%;
-    
+    width: 0%;   
+}
+/* link to image */
+.container img{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
 }
